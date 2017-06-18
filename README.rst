@@ -64,7 +64,7 @@ Or by including ``SSLIFY_PERMANENT`` in your app's config.
 Exclude Certain Paths from Being Redirected
 -------------------------------------------
 You can exlude a path that starts with given string by including a list called ``skips``::
- 
+
      sslify = SSLify(app, skips=['mypath', 'anotherpath'])
 
 Or by including ``SSLIFY_SKIPS`` in your app's config.
@@ -75,14 +75,14 @@ Install
 
 Installation is simple too::
 
-    $ pip install Flask-SSLify
-    
-    
+    $ pip install Flask-SSLify-bp
+
+
 Security consideration using basic auth
 ---------------------------------------
 
 When using basic auth, it is important that the redirect occurs before the user is prompted for
-credentials. Flask-SSLify registers a ``before_request`` handler, to make sure this handler gets
+credentials. Flask-SSLify-bp registers a ``before_request`` handler, to make sure this handler gets
 executed before credentials are entered it is advisable to not prompt for any authentication
 inside a ``before_request`` handler.
 
